@@ -1,0 +1,29 @@
+from cs115 import *
+from functools import reduce
+
+
+#Azhar Pathan
+#CS115E HW1
+#I pledge my honor that I have abided by the Stevens Honor System
+
+
+def mult(x, y):
+    """Returns the product of x and y"""
+    return x * y
+
+def factorial(n):
+    """Returns the factorial of positive input n"""
+    if n==0:
+        return 1
+    else:
+        return reduce(mult,range(1,n+1))
+
+def add(x, y):
+    """Returns the sum of x and y"""
+    return x + y
+
+def mean(L):
+    """finds the mean of a list"""
+    sum = (reduce(add,range(1,len(L)+1)))
+    return sum/len(L)
+
