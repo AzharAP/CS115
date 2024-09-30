@@ -1,0 +1,19 @@
+#Azhar Pathan
+#CS115E Lab1
+#I pledge my honor that I have abided by the Stevens Honor System
+
+from math import factorial
+from cs115 import reduce
+
+
+def inverse(n):
+    """returns the reciprocal of the input n"""
+    return 1/n
+
+#def factorial(n):
+  #  """Returns the factorial of positive input n"""
+   # if n==0:
+   #     return 1
+   # else:
+    #    return reduce(mult,range(1,n+1))
+    
