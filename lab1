@@ -17,3 +17,12 @@ def inverse(n):
    # else:
     #    return reduce(mult,range(1,n+1))
     
+def add(x,y):
+    """This function returns the sum of the numbers x, y"""
+    return x+y
+
+def e(n):
+    """approximates the value of e using the input n as the power"""
+    terms = map(factorial, range(n+1))
+    reciprocal = map(inverse,terms)
+    return reduce(add, reciprocal)
