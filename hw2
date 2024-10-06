@@ -1,0 +1,46 @@
+#Azhar Pathan
+#CS115E HW2
+#I pledge my honor that I have abided by the Stevens Honor System.
+
+#Problem 1
+def addOne(L):
+    """adds one to each number in a list using recursion"""
+    if L==[]:
+        return []
+    else:
+        return [L[0]+1] + addOne(L[1:])
+
+#Problem 2
+def explode(S):
+    """takes a strings and splits it into a list of its characters"""
+    if S=='':
+        return []
+    else:
+        return [S[0]] + explode(S[1:])
+
+#Problem 3
+def myFilter(func,L):
+    """checks if the numbers in the list are odd or even and then print only
+odds or evens"""
+    if L == []:
+        return []
+    elif func(L[0]):  
+        return [L[0]] + myFilter(func, L[1:])
+    else:
+        return myFilter(func, L[1:])
+
+def even(n):
+    return n % 2 == 0
+
+def odd(n):
+    return n % 2 == 1
+
+#Problem 4
+def sumPos(L):
+    """returns the sum all positive numbers in a list"""
+    if L==[]:
+        return 0
+    elif L[0] > 0:
+        return L[0] + sumPos(L[1:])
+    else:
+        return sumPos(L[1:])
